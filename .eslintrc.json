@@ -1,0 +1,33 @@
+{
+    "globals": {
+        "cy": true,
+        "Cypress": true,
+        "it": true,
+        "expect": true,
+        "describe": true,
+        "beforeEach": true,
+        "require": true,
+        "module": true,
+        "config": true
+      },
+    "env": {
+        "browser": true,
+        "es2021": true
+    },
+    "extends": "eslint:recommended",
+    "overrides": [
+    ],
+    "parserOptions": {
+        "ecmaVersion": "latest",
+        "sourceType": "module"
+    },
+    "rules": {
+        "indent": ["error", 2],
+        "max-len": ["error", { "code": 180 }],
+        "no-extra-semi": "error",
+        "one-var-declaration-per-line": ["error", "always"],
+        "no-multi-spaces": "error",
+        "no-multiple-empty-lines": ["error", { "max": 1, "maxEOF": 0, "maxBOF": 0 }],
+        "no-trailing-spaces": "error"
+    }
+}

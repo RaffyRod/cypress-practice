@@ -4,7 +4,12 @@
   "description": "Cypress practice",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "pretest-windows": "rmdir /S /Q cypress\\reports && mkdir cypress\\reports",
+    "pretest": "rm -rf cypress/reports && mkdir cypress/reports",
+    "lint": "eslint cypress/e2e",
+    "lint-fix": "npm run lint -- --fix",
+    "test": "npm run pretest && npx cypress run",
+    "test-windows": "npm run pretest-windows && npx cypress run --browser chrome"
   },
   "repository": {
     "type": "git",
@@ -17,6 +22,10 @@
   },
   "homepage": "https://github.com/RaffyRod/cypress-practice#readme",
   "devDependencies": {
-    "cypress": "^12.0.0"
+    "cypress": "^12.0.0",
+    "eslint": "^8.29.0"
+  },
+  "dependencies": {
+    "cypress-mochawesome-reporter": "^3.2.3"
   }
 }
