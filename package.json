@@ -1,0 +1,22 @@
+{
+  "name": "cypress-practice",
+  "version": "1.0.0",
+  "description": "Cypress practice",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RaffyRod/cypress-practice.git"
+  },
+  "author": "Raffy Rodriguez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RaffyRod/cypress-practice/issues"
+  },
+  "homepage": "https://github.com/RaffyRod/cypress-practice#readme",
+  "devDependencies": {
+    "cypress": "^12.0.0"
+  }
+}
