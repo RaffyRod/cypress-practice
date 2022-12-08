@@ -14,5 +14,14 @@ describe('Admin Page', () => {
     adminPage.addUserRole().click();
     adminPage.selectAdminRole().click();
     adminPage.addEmployeeName().type('Alice Duval');
+    adminPage.selectEmployeeName().click();
+    adminPage.addStatus().click();
+    adminPage.selectEnabledStatus().click();
+    adminPage.addUserName().type('alfredo110');
+    adminPage.addPassword().click();
+    adminPage.addPassword().type('ThisIsSparta123@');
+    adminPage.confirmPassword().type('ThisIsSparta123@');
+    adminPage.saveUserButton().click();
+    adminPage.confirmationToast().should('have.text', 'SuccessSuccessfully Saved');
   });
 });

@@ -20,8 +20,20 @@ class AdminPage{
     return cy.get('.oxd-autocomplete-text-input > input');
   }
 
+  selectEmployeeName(){
+    return cy.get('.oxd-autocomplete-option > span');
+  }
+
   addStatus(){
     return cy.get(':nth-child(3) > .oxd-input-group > :nth-child(2) > .oxd-select-wrapper > .oxd-select-text > .oxd-select-text-input');
+  }
+
+  selectEnabledStatus(){
+    return cy.get('.oxd-select-dropdown > :nth-child(2) > span');
+  }
+
+  selectDisabledStatus(){
+    return cy.get('.oxd-select-dropdown > :nth-child(3) > span');
   }
 
   addUserName(){
@@ -29,7 +41,7 @@ class AdminPage{
   }
 
   addPassword(){
-    cy.get('.user-password-cell > .oxd-input-group > :nth-child(2) > .oxd-input');
+    return cy.get('.user-password-cell > .oxd-input-group > :nth-child(2) > .oxd-input');
   }
 
   confirmPassword(){
@@ -39,6 +51,10 @@ class AdminPage{
   saveUserButton(){
     return cy.get('.oxd-button--secondary');
     // Lisa  Andrews
+  }
+
+  confirmationToast(){
+    return cy.get('.oxd-toast-content');
   }
 
   userSearch(){
