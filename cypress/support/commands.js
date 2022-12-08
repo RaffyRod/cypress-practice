@@ -1,7 +1,5 @@
 import LoginPage from "./pageObjects/loginPage";
 
-
-
 const loginpage = new LoginPage();
 
 // ***********************************************
@@ -16,14 +14,14 @@ const loginpage = new LoginPage();
 //
 //
 // -- This is a parent command --
-    Cypress.Commands.add('login', (email, password) => {
-        cy.visit(Cypress.env('baseUrl'));
-        loginpage.userNameInput().type(Cypress.env('USER_NAME'));
-        loginpage.userPassword().type(Cypress.env('USER_PASSWORD'));
-        loginpage.loginButton().click();
-        loginpage.dashBoardpage().should('have.text', 'Dashboard');
-     });
-//
+Cypress.Commands.add('login', ( ) => {
+  cy.visit(Cypress.env('baseUrl'));
+  loginpage.userNameInput().type(Cypress.env('USER_NAME'));
+  loginpage.userPassword().type(Cypress.env('USER_PASSWORD'));
+  loginpage.loginButton().click();
+  loginpage.dashBoardpage().should('have.text', 'Dashboard');
+});
+
 //
 // -- This is a child command --
 // Cypress.Commands.add('drag', { prevSubject: 'element'}, (subject, options) => { ... })
