@@ -8,10 +8,11 @@ describe('Admin Page', () => {
     cy.login();
   });
 
-  it('Add User using Admin Page', () => {
+  it('Add Admin User using Admin Page', () => {
     adminPage.adminButton().click();
     adminPage.addUserButton().click();
     adminPage.addUserRole().click();
     adminPage.selectAdminRole().click();
+    adminPage.addEmployeeName().type('Alice Duval');
   });
 });
