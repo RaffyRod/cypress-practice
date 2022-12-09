@@ -7,6 +7,7 @@ const fakeEmail = randEmail();
 const fakePassword = randAbbreviation();
 
 describe("Login", () => {
+
   beforeEach(function(){
     cy.openLogin();
   });
