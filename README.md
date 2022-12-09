@@ -4,11 +4,11 @@ The following project is an Automation framework designed using Cypress and Java
 
 | Module           |Number of Scenarios  | Status                                                                |
 | ----------------- |------------ |------------------------------------------------------------------ |
-| Login |5 | ![#00b48a](https://via.placeholder.com/10/00b48a?text=+) |
-| User profile |5 | ![#0a192f](https://via.placeholder.com/10/0a192f?text=+) |
-| Dashboard |5 | ![#0a192f](https://via.placeholder.com/10/0a192f?text=+) |
-| Side menu |5 | ![#0a192f](https://via.placeholder.com/10/0a192f?text=+) |
-| Admin page |14 | ![#0a192f](https://via.placeholder.com/10/0a192f?text=+) |
+| Login |5 | :white_check_mark: |
+| User profile |5 | :black_square_button: |
+| Dashboard |5 | :black_square_button: |
+| Side menu |5 | :black_square_button: |
+| Admin page |14 | :black_square_button: |
 
 ## Test Cases automated on each module
 #### Login Page
