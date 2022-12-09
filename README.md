@@ -1,7 +1,16 @@
 # Cypress Automation Practice (OrangeHRm demo page)
 
-The following project is an Automation framework designed using Cypress and Javascript best practices appliedg for the following test plan's scenarios:
+The following project is an Automation framework designed using Cypress and Javascript best practices applied for the following modules using a test plan:
 
+| Module           |Number of Scenarios  | Status                                                                |
+| ----------------- |------------ |------------------------------------------------------------------ |
+| Login |5 | ![#00b48a](https://via.placeholder.com/10/00b48a?text=+) |
+| User profile |5 | ![#0a192f](https://via.placeholder.com/10/0a192f?text=+) |
+| Dashboard |5 | ![#0a192f](https://via.placeholder.com/10/0a192f?text=+) |
+| Side menu |5 | ![#0a192f](https://via.placeholder.com/10/0a192f?text=+) |
+| Admin page |14 | ![#0a192f](https://via.placeholder.com/10/0a192f?text=+) |
+
+## Test Cases automated on each module
 #### Login Page
 
 - Login successful.
@@ -39,7 +48,7 @@ The following project is an Automation framework designed using Cypress and Java
 
 - Expand/Collide System Users section.
 - Search user by username.
-- Seach user by User Role.
+- Search user by User Role.
 - Search user by Employee Name.
 - Search user by Status.
 - Reset user search.
@@ -48,6 +57,6 @@ The following project is an Automation framework designed using Cypress and Java
 - Edit user.
 - Display number of users.
 - Select all users.
-- Delect selected users.
+- Delete selected users.
 - Use filer by Ascending on Users table.
 - Use filer by Descending on Users table.
