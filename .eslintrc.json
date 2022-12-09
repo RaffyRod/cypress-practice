@@ -6,6 +6,7 @@
         "expect": true,
         "describe": true,
         "beforeEach": true,
+        "afterEach": true,
         "require": true,
         "module": true,
         "config": true

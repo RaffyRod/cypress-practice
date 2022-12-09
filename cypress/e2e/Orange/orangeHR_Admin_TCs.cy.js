@@ -10,6 +10,10 @@ describe('Admin Page', () => {
     cy.login();
   });
 
+  afterEach(function(){
+    cy.logout();
+  });
+
   it('Add Admin User using Admin Page', () => {
     adminPage.adminButton().click();
     adminPage.addUserButton().click();
