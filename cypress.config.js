@@ -1,12 +1,13 @@
 const { defineConfig } = require("cypress");
 
 module.exports = defineConfig({
+  video: false,
   reporter: 'cypress-mochawesome-reporter',
   reporterOptions: {
     reportDir: 'cypress/reports',
-    reportTitle: 'OrangeHR reports',
-    reportPageTitle: 'OrangeHR report',
-    reportFilename: 'API Report',
+    reportTitle: 'OrangeHRM reports',
+    reportPageTitle: 'OrangeHRM report',
+    reportFilename: 'OrangeHRM Report',
     embeddedScreenshots: true,
     charts: true,
     inline: true,
