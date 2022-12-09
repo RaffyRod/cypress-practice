@@ -1,6 +1,8 @@
 import AdminPage from "../../support/pageObjects/adminPage";
+import { randUser } from '@ngneat/falso';
 
 const adminPage = new AdminPage();
+const fakeUserName = randUser().username;
 
 describe('Admin Page', () => {
 
@@ -17,7 +19,7 @@ describe('Admin Page', () => {
     adminPage.selectEmployeeName().click();
     adminPage.addStatus().click();
     adminPage.selectEnabledStatus().click();
-    adminPage.addUserName().type('alfredo110');
+    adminPage.addUserName().type(fakeUserName);
     adminPage.addPassword().click();
     adminPage.addPassword().type('ThisIsSparta123@');
     adminPage.confirmPassword().type('ThisIsSparta123@');
