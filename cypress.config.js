@@ -14,8 +14,8 @@ module.exports = defineConfig({
     overwrite: false,
     autoOpen: false,
     showPending: false,
-    showSkipped: true,
-    timestamp: "longDate",
+    showSkipped: true
+    // timestamp: "longDate",
   },
   e2e: {
     setupNodeEvents(on, config) {
