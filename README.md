@@ -2,7 +2,6 @@
 
 The following project is an Automation framework designed using Cypress and Javascript best practices applied for the following modules using a test plan:
 
-
 | Module           |Number of Scenarios  | Status                                                                |
 | ----------------- |------------ |------------------------------------------------------------------ |
 | Login |5 | :white_check_mark: |

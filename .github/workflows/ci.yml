@@ -27,7 +27,7 @@ jobs:
       - name: Cypress run
         uses: cypress-io/github-action@v4 # use the explicit version number
         with:
-          start: npm run test
+          start: npm run ci-test
 
       - name: Deploy report page
         uses: peaceiris/actions-gh-pages@v3
