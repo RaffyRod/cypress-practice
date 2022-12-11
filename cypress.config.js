@@ -1,21 +1,23 @@
 const { defineConfig } = require("cypress");
+const date = new Date();
+const reportDate = (date.toLocaleString('default', { month: 'long' }))+" "+date.getDate()+"/"+date.getFullYear() +"  " +" "+date.getHours() + ":" + date.getMinutes()+ 
+":" + date.getSeconds();
 
 module.exports = defineConfig({
   video: false,
+  retries: 1,
   reporter: 'cypress-mochawesome-reporter',
   reporterOptions: {
     reportDir: 'cypress/reports',
-    reportTitle: 'OrangeHRM reports',
+    reportTitle: 'OrangeHRM Test report for ' +' ' + reportDate,
     reportPageTitle: 'OrangeHRM report',
-    reportFilename: 'OrangeHRM Report',
     embeddedScreenshots: true,
     charts: true,
     inline: true,
     overwrite: false,
     autoOpen: false,
     showPending: false,
-    showSkipped: true,
-    timestamp: "longDate",
+    showSkipped: true
   },
   e2e: {
     setupNodeEvents(on, config) {
