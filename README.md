@@ -60,3 +60,7 @@ The following project is an Automation framework designed using Cypress and Java
 - Delete selected users.
 - Use filer by Ascending on Users table.
 - Use filer by Descending on Users table.
+
+## Important
+
+After pushing changes to the repo the CI will run finishing by creating and deploying a report to GitHub pages on the following link: https://raffyrod.github.io/cypress-practice/
