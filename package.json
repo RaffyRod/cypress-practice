@@ -9,8 +9,8 @@
     "lint": "eslint cypress/e2e && eslint cypress/support/pageObjects",
     "lint-fix": "npm run lint -- --fix",
     "test": "npm run pretest && npx cypress run  --reporter-options=reportFilename=OrangeHRM Report",
-    "test-windows": "npm run pretest-windows && npx cypress run  --reporter-options=reportFilename=OrangeHRM Report --browser chrome",
-    "ci-test": "npm run pretest && npx cypress run --browser chrome"
+    "test-windows": "npm run pretest-windows && npx cypress run cypress/e2e/Orange  --reporter-options=reportFilename=OrangeHRM Report --browser chrome",
+    "ci-test": "npm run pretest && npx cypress run cypress/e2e/Orange --browser chrome"
   },
   "repository": {
     "type": "git",
