@@ -5,7 +5,6 @@ const reportDate = (date.toLocaleString('default', { month: 'long' }))+" "+date.
 
 module.exports = defineConfig({
   video: false,
-  retries: 1,
   reporter: 'cypress-mochawesome-reporter',
   reporterOptions: {
     reportDir: 'cypress/reports',
