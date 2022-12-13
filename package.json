@@ -10,7 +10,8 @@
     "lint-fix": "npm run lint -- --fix",
     "test": "npm run pretest && npx cypress run  --reporter-options=reportFilename=OrangeHRM Report",
     "test-windows": "npm run pretest-windows && npx cypress run  --reporter-options=reportFilename=OrangeHRM Report --browser chrome",
-    "ci-test": "npm run pretest && npx cypress run --reporter-options=reportFilename=index"
+    "pre-ci-test":"rm -rf cypress/reports && mkdir cypress/reports && --reporter-options=reportFilename=index",
+    "ci-test": "npm run pre-ci-test && npx cypress run "
   },
   "repository": {
     "type": "git",
