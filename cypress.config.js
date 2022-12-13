@@ -10,6 +10,7 @@ module.exports = defineConfig({
     reportDir: 'cypress/reports',
     reportTitle: 'OrangeHRM Test report for ' +' ' + reportDate,
     reportPageTitle: 'OrangeHRM report',
+    reportFilename:'',
     embeddedScreenshots: true,
     charts: true,
     inline: true,
