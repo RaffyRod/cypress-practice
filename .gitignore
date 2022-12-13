@@ -109,3 +109,5 @@ dist
 *.html
 /screenshots
 *.png
+
+.DS_Store
