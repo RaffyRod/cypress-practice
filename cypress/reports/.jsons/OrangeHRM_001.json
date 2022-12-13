@@ -1,0 +1,214 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2022-12-13T22:24:28.771Z",
+    "end": "2022-12-13T22:24:36.469Z",
+    "duration": 7698,
+    "testsRegistered": 6,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 5,
+    "hasSkipped": true
+  },
+  "results": [
+    {
+      "uuid": "034ec625-d003-4fea-b54a-ff2f78eea6f4",
+      "title": "",
+      "fullFile": "cypress\\e2e\\Orange\\02-orangeHR_Dashboard_TCs.cy.js",
+      "file": "cypress\\e2e\\Orange\\02-orangeHR_Dashboard_TCs.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "880e8f99-779e-468f-a699-4e9ae2690a89",
+          "title": "Dashboard Page",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Check Time at Work section",
+              "fullTitle": "Dashboard Page Check Time at Work section",
+              "timedOut": null,
+              "duration": 968,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "dashBoardPage.timeAtWorkCard().should('be.visible');\ndashBoardPage.timeAtWorkTitle().contains('Time at Work');",
+              "err": {
+                "message": "TypeError: The following error originated from your application code, not from Cypress. It was caused by an unhandled promise rejection.\n\n  > Cannot read properties of undefined (reading 'response')\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the `uncaught:exception` event.\n\nhttps://on.cypress.io/uncaught-exception-from-application\n\nBecause this error occurred during a `after each` hook we are skipping the remaining tests in the current suite: `Dashboard Page`",
+                "estack": "TypeError: The following error originated from your application code, not from Cypress. It was caused by an unhandled promise rejection.\n\n  > Cannot read properties of undefined (reading 'response')\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the `uncaught:exception` event.\n\nhttps://on.cypress.io/uncaught-exception-from-application\n\nBecause this error occurred during a `after each` hook we are skipping the remaining tests in the current suite: `Dashboard Page`\n    at <unknown> (https://opensource-demo.orangehrmlive.com/web/dist/js/app.js?1666596668857:1:24808)",
+                "diff": null
+              },
+              "uuid": "9c2b97b9-a661-409a-ba36-969f0ac47b4e",
+              "parentUUID": "880e8f99-779e-468f-a699-4e9ae2690a89",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Check My Actions section",
+              "fullTitle": "Dashboard Page Check My Actions section",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "dashBoardPage.myActionsCard().should('be.visible');\ndashBoardPage.myActionsTitle().contains('My Actions');",
+              "err": {},
+              "uuid": "c3dda26c-89d0-476d-8eff-ddee2799634b",
+              "parentUUID": "880e8f99-779e-468f-a699-4e9ae2690a89",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "Check Quick Launch section",
+              "fullTitle": "Dashboard Page Check Quick Launch section",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "dashBoardPage.quickLunchCard().should('be.visible');\ndashBoardPage.quickLunchTitle().contains('Quick Launch');",
+              "err": {},
+              "uuid": "d8c6199b-ad35-4319-93a5-fa0f886b2f44",
+              "parentUUID": "880e8f99-779e-468f-a699-4e9ae2690a89",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "Check Employees on Leave",
+              "fullTitle": "Dashboard Page Check Employees on Leave",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "dashBoardPage.employeesOnLeaveTodayCard().should('be.visible');\ndashBoardPage.employeesOnLeaveTitle().contains('Employees on Leave');",
+              "err": {},
+              "uuid": "2ce56aa7-a951-470e-b14c-42a8978f33aa",
+              "parentUUID": "880e8f99-779e-468f-a699-4e9ae2690a89",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "Check Employee Distribution by Sub Unit",
+              "fullTitle": "Dashboard Page Check Employee Distribution by Sub Unit",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "dashBoardPage.employeeDistributionbySubUnitCard().should('be.visible');\ndashBoardPage.employeeDistributionbySubUniTitle().contains('Employee Distribution by Sub Unit');",
+              "err": {},
+              "uuid": "f6932815-f4d4-4d58-ad23-281ca31317f9",
+              "parentUUID": "880e8f99-779e-468f-a699-4e9ae2690a89",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "Check Employee Distribution by Location",
+              "fullTitle": "Dashboard Page Check Employee Distribution by Location",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "dashBoardPage.employeeDistributionbyLocationCard().should('be.visible');\ndashBoardPage.employeeDistributionbyLocationTitle().contains('Employee Distribution by Location');",
+              "err": {},
+              "uuid": "3d5e36ce-1819-4448-a913-78c68e25e99b",
+              "parentUUID": "880e8f99-779e-468f-a699-4e9ae2690a89",
+              "isHook": false,
+              "skipped": true
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "9c2b97b9-a661-409a-ba36-969f0ac47b4e"
+          ],
+          "pending": [],
+          "skipped": [
+            "c3dda26c-89d0-476d-8eff-ddee2799634b",
+            "d8c6199b-ad35-4319-93a5-fa0f886b2f44",
+            "2ce56aa7-a951-470e-b14c-42a8978f33aa",
+            "f6932815-f4d4-4d58-ad23-281ca31317f9",
+            "3d5e36ce-1819-4448-a913-78c68e25e99b"
+          ],
+          "duration": 968,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "OrangeHRM",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress\\reports\\.jsons",
+        "reportTitle": "OrangeHRM Test report for  December 13/2022   18:24:10",
+        "reportPageTitle": "OrangeHRM report",
+        "reportFilename": "OrangeHRM",
+        "embeddedScreenshots": true,
+        "charts": true,
+        "inline": true,
+        "overwrite": false,
+        "autoOpen": false,
+        "showPending": false,
+        "showSkipped": true,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
