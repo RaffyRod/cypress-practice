@@ -1,4 +1,7 @@
 import SideMenu from "../../support/pageObjects/sideMenu";
+Cypress.on('uncaught:exception', (err, runnable) => {
+  return false;
+});
 
 const sidemenu = new SideMenu();
 
@@ -9,10 +12,6 @@ describe('Side Menu', () => {
     cy.url().should('eq', Cypress.env('dashboardurl'));
   });
 
-  afterEach(function(){
-    cy.logout();
-  });
-
   it('Collide Side Menu', ()=>{
     sidemenu.collideButton().click();
     sidemenu.sideSearchBar().should('not.be.visible');
@@ -21,10 +20,14 @@ describe('Side Menu', () => {
   it('Expand side menu', ()=>{
     sidemenu.collideButton().click();
     sidemenu.sideSearchBar().should('not.be.visible');
-    cy.wait(2000);
     sidemenu.collideButton().click();
     sidemenu.sideSearchBar().should('be.visible');
-
   });
 
+  it('Click on the on OrangeHRM icon', ()=>{
+    sidemenu.getBanner().click();
+    //cy.wait(7000);
+    const newUrl = cy.url();
+    expect(Cypress.env('baseUrl')).to.not.equal(newUrl);
+  });
 });

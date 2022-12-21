@@ -7,6 +7,10 @@ class SideMenu{
   sideSearchBar(){
     return cy.get('.oxd-input');
   }
+
+  getBanner(){
+    return cy.get('.oxd-brand-banner > img');
+  }
 }
 
 export default SideMenu;
