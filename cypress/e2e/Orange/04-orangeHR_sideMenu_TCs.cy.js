@@ -26,7 +26,6 @@ describe('Side Menu', () => {
 
   it('Click on the on OrangeHRM icon', ()=>{
     sidemenu.getBanner().click();
-    //cy.wait(7000);
     const newUrl = cy.url();
     expect(Cypress.env('baseUrl')).to.not.equal(newUrl);
   });
