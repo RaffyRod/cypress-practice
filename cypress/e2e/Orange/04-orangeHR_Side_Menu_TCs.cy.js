@@ -30,7 +30,7 @@ describe('Side Menu', () => {
     expect(Cypress.env('baseUrl')).to.not.equal(newUrl);
   });
 
-  it.only('Visit all side menu pages', ()=>{
+  it('Visit all side menu pages', ()=>{
     sidemenu.adminLink().should('have.attr', 'href').and('include', 'admin');
     sidemenu.pmiLink().should('have.attr', 'href').and('include', 'pim')
     sidemenu.leaveLink().should('have.attr', 'href').and('include', 'leave');
