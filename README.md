@@ -40,8 +40,8 @@ The following project is an Automation framework designed using Cypress and Java
 
 - Collide side menu.
 - Expand side menu.
-- Search using the Search bar.
-- Visit all pages.
+- Perform search using the search bar.
+- Visit all side menu pages.
 - Click on OrangeHRM icon.
 
 #### Admin page
