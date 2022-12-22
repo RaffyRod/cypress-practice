@@ -30,25 +30,16 @@ describe('Side Menu', () => {
     expect(Cypress.env('baseUrl')).to.not.equal(newUrl);
   });
 
-  it('Visit all side menu pages', ()=>{
-    sidemenu.adminLink().click();
-    cy.url().should('includes', 'admin').go('back');
-    sidemenu.pmiLink().click();
-    cy.url().should('includes', 'pim').go('back');
-    sidemenu.leaveLink().click();
-    cy.url().should('includes', 'leave').go('back');
-    sidemenu.timeLink().click();
-    cy.url().should('includes', 'time').go('back');
-    sidemenu.recruitmentLink().click();
-    cy.url().should('includes', 'recruitment').go('back');
-    sidemenu.infoLink().click();
-    cy.url().should('includes', 'viewPersonalDetails').go('back');
-    sidemenu.performanceLink().click();
-    cy.url().should('includes', 'performance').go('back');
-    sidemenu.directoryLink().click();
-    cy.url().should('includes', 'directory').go('back');
-    sidemenu.maintenanceLink().click();
-    cy.url().should('includes', 'maintenance').go('back');
+  it.only('Visit all side menu pages', ()=>{
+    sidemenu.adminLink().should('have.attr', 'href').and('include', 'admin');
+    sidemenu.pmiLink().should('have.attr', 'href').and('include', 'pim')
+    sidemenu.leaveLink().should('have.attr', 'href').and('include', 'leave');
+    sidemenu.timeLink().should('have.attr', 'href').and('include', 'time');
+    sidemenu.recruitmentLink().should('have.attr', 'href').and('include', 'recruitment');
+    sidemenu.infoLink().should('have.attr', 'href').and('include', 'viewMyDetails');
+    sidemenu.performanceLink().should('have.attr', 'href').and('include', 'performance');
+    sidemenu.directoryLink().should('have.attr', 'href').and('include', 'directory');
+    sidemenu.maintenanceLink().should('have.attr', 'href').and('include', 'maintenance');
   });
 
   it('Perform search using the search bar', ()=>{
