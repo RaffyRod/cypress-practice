@@ -7,7 +7,7 @@ The following project is an Automation framework designed using Cypress and Java
 | Login |5 | :white_check_mark: |
 | User profile |5 | :white_check_mark: |
 | Dashboard |5 | :white_check_mark: |
-| Side menu |5 | :black_square_button: |
+| Side menu |5 | :white_check_mark: |
 | Admin page |14 | :black_square_button: |
 
 ## Test Cases automated on each module
