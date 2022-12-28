@@ -10,6 +10,9 @@ describe('Side Menu', () => {
   beforeEach(function(){
     cy.login();
     cy.url().should('eq', Cypress.env('dashboardurl'));
+    Cypress.on('uncaught:exception', () => {
+      return false
+    });
   });
 
   it('Collide Side Menu', ()=>{
