@@ -4,7 +4,6 @@ const reportDate = (date.toLocaleString('default', { month: 'long' }))+" "+date.
 ":" + date.getSeconds();
 
 module.exports = defineConfig({
-  experimentalSessionAndOrigin: true,
   video: false,
   reporter: 'cypress-mochawesome-reporter',
   reporterOptions: {

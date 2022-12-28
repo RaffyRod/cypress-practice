@@ -7,6 +7,9 @@ describe('Dashboard Page', () => {
   beforeEach(function(){
     cy.login();
     cy.url().should('eq', Cypress.env('dashboardurl'));
+    Cypress.on('uncaught:exception', () => {
+      return false
+    });
   });
 
   afterEach(function(){
