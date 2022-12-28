@@ -33,7 +33,7 @@ describe('Dashboard Page', () => {
     dashBoardPage.employeesOnLeaveTitle().contains('Employees on Leave');
   });
 
-  it('Check Employee Distribution by Sub Unit', () => {
+  it('Check Employee Distribution by Sub Unit',() => {
     dashBoardPage.employeeDistributionbySubUnitCard().should('be.visible');
     dashBoardPage.employeeDistributionbySubUniTitle().contains('Employee Distribution by Sub Unit');
   });
