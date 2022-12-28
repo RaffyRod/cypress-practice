@@ -26,8 +26,9 @@ describe('Side Menu', () => {
 
   it('Click on the on OrangeHRM icon', ()=>{
     sidemenu.getBanner().click();
-    const newUrl = cy.url();
-    expect(Cypress.env('baseUrl')).to.not.equal(newUrl);
+    cy.origin(Cypress.env('prodURL'), ()=> {
+      cy.url().should('eq', Cypress.env('prodURL'));
+    });
   });
 
   it('Visit all side menu pages', ()=>{
