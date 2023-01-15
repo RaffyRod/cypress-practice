@@ -6,14 +6,6 @@ const fakeUserName = randUser().username;
 
 describe('Admin Page', () => {
 
-  // beforeEach(function(){
-  //   cy.login();
-  // });
-
-  // afterEach(function(){
-  //   cy.logout();
-  // });
-
   it.skip('Add Admin User using Admin Page', () => {
     adminPage.adminButton().click();
     adminPage.addUserButton().click();
