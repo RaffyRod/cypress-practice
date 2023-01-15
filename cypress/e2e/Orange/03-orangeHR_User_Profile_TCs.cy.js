@@ -1,4 +1,4 @@
-import UserProfile from "../../support/pageObjects/UserProfile";
+import UserProfile from "../../support/pageObjects/userProfile";
 import LoginPage from "../../support/pageObjects/loginPage";
 
 const userProfileSection = new UserProfile();
