@@ -1,4 +1,4 @@
-class userProfile {
+class UserProfile {
   userProfileDropdown() {
     return cy.get('.oxd-userdropdown-tab');
   }
@@ -36,4 +36,4 @@ class userProfile {
   }
 }
 
-export default userProfile;
+export default UserProfile;

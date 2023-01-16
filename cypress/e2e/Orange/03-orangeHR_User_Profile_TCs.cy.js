@@ -1,7 +1,7 @@
-import userProfile from "../../support/pageObjects/userProfile";
+import UserProfile from "../../support/pageObjects/userProfile";
 import LoginPage from "../../support/pageObjects/loginPage";
 
-const userProfileSection = new userProfile();
+const userProfileSection = new UserProfile();
 const loginPage = new LoginPage();
 
 describe('User profile section', () => {
