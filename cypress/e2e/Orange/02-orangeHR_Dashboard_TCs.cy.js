@@ -31,9 +31,9 @@ describe('Dashboard Page', () => {
     dashBoardPage.quickLunchTitle().contains('Quick Launch');
   });
 
-  it('Check Employees on Leave', () => {
+  it.only('Check Employees on Leave', () => {
     dashBoardPage.employeesOnLeaveTodayCard().should('be.visible');
-    dashBoardPage.employeesOnLeaveTitle().contains('Employees on Leave');
+    dashBoardPage.employeesOnLeaveTitle().contains('Employees on Leave Today');
   });
 
   it('Check Employee Distribution by Sub Unit',() => {
