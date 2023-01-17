@@ -65,6 +65,4 @@ The following project is an Automation framework designed using Cypress and Java
 
 - After pushing changes to the repo the CI will run finishing by creating and deploying a report to GitHub pages on the following link: https://raffyrod.github.io/cypress-practice/
 
-- SonarCloud code review information can be found at:
-
-https://sonarcloud.io/project/overview?id=RaffyRod_cypress-practice
+- SonarCloud code review information can be found at: https://sonarcloud.io/project/overview?id=RaffyRod_cypress-practice
