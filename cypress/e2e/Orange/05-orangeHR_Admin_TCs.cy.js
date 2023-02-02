@@ -1,5 +1,6 @@
 import AdminPage from "../../support/pageObjects/adminPage";
 import { randUser } from '@ngneat/falso';
+import { userInfo } from '../../support/inputData';
 
 const adminPage = new AdminPage();
 const fakeUserName = randUser().username;
@@ -12,9 +13,9 @@ describe('Admin Page', () => {
     });
   });
 
-  afterEach(function(){
-    cy.logout();
-  });
+  // afterEach(function(){
+  //   cy.logout();
+  // });
 
   it('Expand/Collide System Users section', () => {
     adminPage.adminButton().click();
@@ -66,14 +67,52 @@ describe('Admin Page', () => {
     adminPage.selectAllUsers().click({force: true});
   });
 
-  // Add user.
-  // Delete user.
-  // Edit user.
-  // Delete selected users.
-  // Use filer by Ascending on Users table.
-  // Use filer by Descending on Users table.
+  it('Delete user', () => {
+    adminPage.adminButton().click();
+    adminPage.userRoleDropdown().click({force: true});
+    adminPage.userRoleESS().click({force: true});
+    adminPage.searchButton().click({force: true});
+    adminPage.deleteFirstUserIcon().click();
+    adminPage.deleteModal().should('be.visible');
+    adminPage.deleteButton().click();
+    adminPage.confirmationToast().should('be.visible');
+    adminPage.confirmationToast().should('have.text', 'SuccessSuccessfully Deleted');
+  });
 
-  it.skip('Add Admin User using Admin Page', () => {
+  it('Edit user', () => {
+    adminPage.adminButton().click();
+    adminPage.editFirstUserIcon().click();
+    adminPage.addUserName().clear().type(userInfo.userData.fullName);
+    adminPage.saveUserButton().click();
+    adminPage.confirmationToast().should('be.visible');
+    adminPage.confirmationToast().should('have.text', 'SuccessSuccessfully Updated');
+  });
+
+  it('Delete selected users.', () => {
+    adminPage.adminButton().click();
+    adminPage.userRoleDropdown().click({force: true});
+    adminPage.userRoleESS().click({force: true});
+    adminPage.searchButton().click({force: true});
+    adminPage.selectFirstUser().click({force: true});
+    adminPage.deletedSelectedUsersButton().click({force: true});
+    adminPage.deletedSelectedUsersModalButton().click()
+    adminPage.confirmationToast().should('be.visible');
+    adminPage.confirmationToast().should('have.text', 'SuccessSuccessfully Deleted');
+  });
+
+  it('Use filer by Ascending on Users table', () => {
+    adminPage.adminButton().click();
+    adminPage.sortUsernames().click({force: true});
+    adminPage.sortUsernamesAscending().click({force: true});
+  });
+
+  it('Use filer by Descending on Users table', () => {
+    adminPage.adminButton().click();
+    adminPage.sortUsernames().click({force: true});
+    adminPage.sortUsernamesDescending().click({force: true});
+  });
+
+  it.skip('Add user', () => {
     adminPage.adminButton().click();
     adminPage.addUserButton().click();
     adminPage.addUserRole().click();
