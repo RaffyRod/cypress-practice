@@ -28,7 +28,7 @@ class DashBoardPage {
   }
 
   employeesOnLeaveTitle() {
-    return cy.get(':nth-child(4) > .oxd-sheet > .orangehrm-dashboard-widget-header > .orangehrm-dashboard-widget-name > .oxd-text')
+    return cy.get(':nth-child(5) > .oxd-sheet > .orangehrm-dashboard-widget-header > .orangehrm-dashboard-widget-name > .oxd-text')
   }
 
   employeeDistributionbySubUnitCard() {
@@ -36,7 +36,7 @@ class DashBoardPage {
   }
 
   employeeDistributionbySubUniTitle() {
-    return cy.get(':nth-child(5) > .oxd-sheet > .orangehrm-dashboard-widget-header > .orangehrm-dashboard-widget-name > .oxd-text')
+    return cy.get(':nth-child(6) > .oxd-sheet > .orangehrm-dashboard-widget-header > .orangehrm-dashboard-widget-name > .oxd-text')
   }
 
   employeeDistributionbyLocationCard() {
@@ -44,7 +44,7 @@ class DashBoardPage {
   }
 
   employeeDistributionbyLocationTitle() {
-    return cy.get(':nth-child(6) > .oxd-sheet > .orangehrm-dashboard-widget-header > .orangehrm-dashboard-widget-name > .oxd-text')
+    return cy.get(':nth-child(7) > .oxd-sheet > .orangehrm-dashboard-widget-header > .orangehrm-dashboard-widget-name > .oxd-text')
   }
 }
 

@@ -18,6 +18,7 @@ Cypress.Commands.add("login", () => {
 
 Cypress.Commands.add("logout", () => {
   userProfileSection.userProfileDropdown().click();
+  cy.wait(6000)
   userProfileSection.logoutSection().click();
   cy.url().should('eq', Cypress.env("baseUrl"));
   loginpage.userNameInput().should('be.visible');

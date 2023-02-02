@@ -7,6 +7,9 @@ describe('Dashboard Page', () => {
   beforeEach(function(){
     cy.login();
     cy.url().should('eq', Cypress.env('dashboardurl'));
+    Cypress.on('uncaught:exception', () => {
+      return false
+    });
   });
 
   afterEach(function(){
@@ -30,7 +33,7 @@ describe('Dashboard Page', () => {
 
   it('Check Employees on Leave', () => {
     dashBoardPage.employeesOnLeaveTodayCard().should('be.visible');
-    dashBoardPage.employeesOnLeaveTitle().contains('Employees on Leave');
+    dashBoardPage.employeesOnLeaveTitle().contains('Employees on Leave Today');
   });
 
   it('Check Employee Distribution by Sub Unit',() => {

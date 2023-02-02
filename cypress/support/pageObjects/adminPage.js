@@ -1,5 +1,9 @@
 class AdminPage{
 
+  expandCollideSystemUsersTable(){
+    return cy.get(':nth-child(3) > .oxd-icon-button');
+  }
+
   adminButton(){
     return cy.get(':nth-child(1) > .oxd-main-menu-item > .oxd-text');
   }
@@ -62,7 +66,35 @@ class AdminPage{
   }
 
   searchButton(){
-    cy.get('.oxd-form-actions > .oxd-button--secondary');
+    return cy.get('.oxd-form-actions > .oxd-button--secondary');
+  }
+
+  resetSearchButton(){
+    return cy.get('.oxd-button--ghost');
+  }
+
+  totalUsers(){
+    return cy.get('.orangehrm-horizontal-padding > .oxd-text');
+  }
+
+  selectAllUsers(){
+    return cy.get('.oxd-table-row > :nth-child(1) > .oxd-checkbox-wrapper > label > .oxd-checkbox-input > .oxd-icon');
+  }
+
+  usernameRow() {
+    return cy.get('.oxd-table-card > .oxd-table-row > :nth-child(2)');
+  }
+
+  userRoleRow() {
+    return cy.get('.oxd-table-card > .oxd-table-row > :nth-child(3)');
+  }
+
+  employeeNameRow() {
+    return cy.get('.oxd-table-card > .oxd-table-row > :nth-child(4)');
+  }
+
+  userStatusRow() {
+    return cy.get('.oxd-table-card > .oxd-table-row > :nth-child(5)');
   }
 
 }
