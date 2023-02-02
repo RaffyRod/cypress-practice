@@ -13,9 +13,9 @@ describe('Admin Page', () => {
     });
   });
 
-  // afterEach(function(){
-  //   cy.logout();
-  // });
+  afterEach(function(){
+    cy.logout();
+  });
 
   it('Expand/Collide System Users section', () => {
     adminPage.adminButton().click();
