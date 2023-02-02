@@ -6,6 +6,73 @@ const fakeUserName = randUser().username;
 
 describe('Admin Page', () => {
 
+  beforeEach(function(){
+    cy.login();Cypress.on('uncaught:exception', () => {
+      return false
+    });
+  });
+
+  afterEach(function(){
+    cy.logout();
+  });
+
+  it('Expand/Collide System Users section', () => {
+    adminPage.adminButton().click();
+    adminPage.expandCollideSystemUsersTable().click({force: true});
+  });
+
+  it('Search user by username', () => {
+    adminPage.adminButton().click();
+    adminPage.userSearch().type('Admin');
+    adminPage.searchButton().click({force: true});
+    adminPage.usernameRow().should('have.text', 'Admin');
+  });
+
+  it('Search user by User Role', () => {
+    adminPage.adminButton().click();
+    adminPage.userSearch().type('Admin');
+    adminPage.searchButton().click({force: true});
+    adminPage.userRoleRow().should('have.text', 'Admin');
+  });
+
+  it('Search user by Employee Name', () => {
+    adminPage.adminButton().click();
+    adminPage.userSearch().type('Admin');
+    adminPage.searchButton().click({force: true});
+    adminPage.employeeNameRow().should('be.visible');
+  });
+
+  it('Search user by Status', () => {
+    adminPage.adminButton().click();
+    adminPage.userSearch().type('Admin');
+    adminPage.searchButton().click({force: true});
+    adminPage.userStatusRow().should('have.text', 'Enabled');
+  });
+
+  it('Reset user search', () => {
+    adminPage.adminButton().click();
+    adminPage.userSearch().type('Admin');
+    adminPage.resetSearchButton().click({force: true});
+    adminPage.userSearch().should('be.empty');
+  });
+
+  it('Display number of users', () => {
+    adminPage.adminButton().click();
+    adminPage.totalUsers().should('be.visible');
+  });
+
+  it('Select all users', () => {
+    adminPage.adminButton().click();
+    adminPage.selectAllUsers().click({force: true});
+  });
+
+  // Add user.
+  // Delete user.
+  // Edit user.
+  // Delete selected users.
+  // Use filer by Ascending on Users table.
+  // Use filer by Descending on Users table.
+
   it.skip('Add Admin User using Admin Page', () => {
     adminPage.adminButton().click();
     adminPage.addUserButton().click();
