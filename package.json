@@ -23,7 +23,8 @@
   },
   "homepage": "https://github.com/RaffyRod/cypress-practice#readme",
   "devDependencies": {
-    "cypress": "^12.3.0",
+    "@faker-js/faker": "^7.6.0",
+    "cypress": "^12.5.1",
     "eslint": "^8.29.0"
   },
   "dependencies": {

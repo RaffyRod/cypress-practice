@@ -53,12 +53,22 @@ class AdminPage{
   }
 
   saveUserButton(){
+    cy.wait(1000);
     return cy.get('.oxd-button--secondary');
     // Lisa  Andrews
   }
 
   confirmationToast(){
     return cy.get('.oxd-toast-content');
+  }
+
+  userRoleDropdown(){
+    cy.wait(1000);
+    return cy.get(':nth-child(2) > .oxd-input-group > :nth-child(2) > .oxd-select-wrapper > .oxd-select-text > .oxd-select-text--after > .oxd-icon');
+  }
+
+  userRoleESS(){
+    return cy.get('.oxd-select-dropdown > :nth-child(3)');
   }
 
   userSearch(){
@@ -77,8 +87,49 @@ class AdminPage{
     return cy.get('.orangehrm-horizontal-padding > .oxd-text');
   }
 
+  sortUsernames(){
+    return cy.get(':nth-child(2) > .oxd-table-header-sort > .oxd-icon-button__icon');
+  }
+
+  sortUsernamesAscending(){
+    return cy.get('.--active > ul > :nth-child(1) > .oxd-text');
+  }
+
+  sortUsernamesDescending(){
+    return cy.get('.--active > ul > :nth-child(2) > .oxd-text');
+  }
+
   selectAllUsers(){
     return cy.get('.oxd-table-row > :nth-child(1) > .oxd-checkbox-wrapper > label > .oxd-checkbox-input > .oxd-icon');
+  }
+
+  selectFirstUser() {
+    return cy.get(':nth-child(1) > .oxd-table-row > :nth-child(1) > .oxd-table-card-cell-checkbox > .oxd-checkbox-wrapper > label > .oxd-checkbox-input > .oxd-icon')
+  }
+
+  deletedSelectedUsersButton() {
+    return cy.get('.orangehrm-horizontal-padding > div > .oxd-button')
+  }
+
+  deletedSelectedUsersModalButton() {
+    return cy.get('.orangehrm-modal-footer > .oxd-button--label-danger')
+  }
+
+  editFirstUserIcon() {
+    return cy.get(':nth-child(1) > .oxd-table-row > :nth-child(6) > .oxd-table-cell-actions > :nth-child(2)')
+  }
+
+  deleteFirstUserIcon() {
+    cy.wait(1500);
+    return cy.get(':nth-child(1) > .oxd-table-row > :nth-child(6) > .oxd-table-cell-actions > :nth-child(1)')
+  }
+
+  deleteModal() {
+    return cy.get('.oxd-sheet');
+  }
+
+  deleteButton() {
+    return cy.get('.oxd-button--label-danger');
   }
 
   usernameRow() {
