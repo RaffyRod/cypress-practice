@@ -72,7 +72,7 @@ describe('Admin Page', () => {
     adminPage.userRoleDropdown().click({force: true});
     adminPage.userRoleESS().click({force: true});
     adminPage.searchButton().click({force: true});
-    adminPage.deleteFirstUserIcon().click();
+    adminPage.deleteFirstUserIcon().click({force: true});
     adminPage.deleteModal().should('be.visible');
     adminPage.deleteButton().click();
     adminPage.confirmationToast().should('be.visible');
@@ -81,7 +81,7 @@ describe('Admin Page', () => {
 
   it('Edit user', () => {
     adminPage.adminButton().click();
-    adminPage.editFirstUserIcon().click();
+    adminPage.editFirstUserIcon().click({force: true});
     adminPage.addUserName().clear().type(userInfo.userData.fullName);
     adminPage.saveUserButton().click();
     adminPage.confirmationToast().should('be.visible');
