@@ -8,7 +8,7 @@ The following project is an Automation framework designed using Cypress and Java
 | User profile |5 | :white_check_mark: |
 | Dashboard |5 | :white_check_mark: |
 | Side menu |5 | :white_check_mark: |
-| Admin page |14 | :black_square_button: |
+| Admin page |13 | :white_check_mark: |
 
 ## Test Cases automated on each module
 #### Login Page
@@ -52,7 +52,6 @@ The following project is an Automation framework designed using Cypress and Java
 - Search user by Employee Name.
 - Search user by Status.
 - Reset user search.
-- Add user.
 - Delete user.
 - Edit user.
 - Display number of users.
